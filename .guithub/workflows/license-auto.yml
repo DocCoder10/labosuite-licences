@@ -61,7 +61,7 @@ jobs:
           CUSTOMER_PHONE: ${{ inputs.customer_phone }}
           NOTES: ${{ inputs.notes }}
           APP_VERSION: ${{ inputs.app_version }}
-          LICENSE_PRIVATE_KEY: ${{ secrets.LICENSE_PRIVATE_KEY }}
+          LABOSUITEPRO_LICENSE_PRIVATE_KEY: ${{ secrets.LABOSUITEPRO_LICENSE_PRIVATE_KEY }}
         run: |
           node <<'NODE'
           const fs = require('node:fs');
@@ -76,14 +76,14 @@ jobs:
           const customerPhone = String(process.env.CUSTOMER_PHONE || '').trim();
           const notes = String(process.env.NOTES || '').trim();
           const appVersion = String(process.env.APP_VERSION || '').trim() || '-';
-          const privateKey = String(process.env.LICENSE_PRIVATE_KEY || '').trim();
+          const privateKey = String(process.env.LABOSUITEPRO_LICENSE_PRIVATE_KEY || '').trim();
 
           if (!requestId) throw new Error('request_id manquant');
           if (!/^[a-f0-9]{64}$/.test(machineFingerprint)) {
             throw new Error('machine_fingerprint invalide (64 hex requis)');
           }
           if (!privateKey.includes('BEGIN')) {
-            throw new Error('LICENSE_PRIVATE_KEY manquant ou invalide');
+            throw new Error('LABOSUITEPRO_LICENSE_PRIVATE_KEY manquant ou invalide');
           }
 
           const fixedDays = { trial: 7, monthly: 30, annual: 365 };
