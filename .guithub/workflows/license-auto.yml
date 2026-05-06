@@ -1,0 +1,161 @@
+name: license-auto
+
+on:
+  workflow_dispatch:
+    inputs:
+      request_id:
+        description: "Desktop request id"
+        required: true
+        type: string
+      machine_fingerprint:
+        description: "Machine fingerprint hash"
+        required: true
+        type: string
+      license_type:
+        description: "trial | monthly | annual | lifetime | custom"
+        required: true
+        type: string
+      duration_days:
+        description: "Custom duration days (for custom)"
+        required: false
+        type: string
+      customer_name:
+        description: "Customer name"
+        required: false
+        type: string
+      customer_phone:
+        description: "Customer phone"
+        required: false
+        type: string
+      notes:
+        description: "Internal notes"
+        required: false
+        type: string
+      app_version:
+        description: "Desktop app version"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  generate-license:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate and sign license
+        env:
+          REQUEST_ID: ${{ inputs.request_id }}
+          MACHINE_FINGERPRINT: ${{ inputs.machine_fingerprint }}
+          LICENSE_TYPE: ${{ inputs.license_type }}
+          DURATION_DAYS: ${{ inputs.duration_days }}
+          CUSTOMER_NAME: ${{ inputs.customer_name }}
+          CUSTOMER_PHONE: ${{ inputs.customer_phone }}
+          NOTES: ${{ inputs.notes }}
+          APP_VERSION: ${{ inputs.app_version }}
+          LICENSE_PRIVATE_KEY: ${{ secrets.LICENSE_PRIVATE_KEY }}
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const crypto = require('node:crypto');
+
+          const requestId = String(process.env.REQUEST_ID || '').trim();
+          const machineFingerprint = String(process.env.MACHINE_FINGERPRINT || '').trim().toLowerCase();
+          const requestedType = String(process.env.LICENSE_TYPE || '').trim().toLowerCase();
+          const durationDaysRaw = String(process.env.DURATION_DAYS || '').trim();
+          const customerName = String(process.env.CUSTOMER_NAME || '').trim() || 'Client';
+          const customerPhone = String(process.env.CUSTOMER_PHONE || '').trim();
+          const notes = String(process.env.NOTES || '').trim();
+          const appVersion = String(process.env.APP_VERSION || '').trim() || '-';
+          const privateKey = String(process.env.LICENSE_PRIVATE_KEY || '').trim();
+
+          if (!requestId) throw new Error('request_id manquant');
+          if (!/^[a-f0-9]{64}$/.test(machineFingerprint)) {
+            throw new Error('machine_fingerprint invalide (64 hex requis)');
+          }
+          if (!privateKey.includes('BEGIN')) {
+            throw new Error('LICENSE_PRIVATE_KEY manquant ou invalide');
+          }
+
+          const fixedDays = { trial: 7, monthly: 30, annual: 365 };
+          const inputType = requestedType === 'custom' ? 'customize' : requestedType;
+          const allowed = new Set(['trial', 'monthly', 'annual', 'lifetime', 'customize']);
+          if (!allowed.has(inputType)) {
+            throw new Error('license_type invalide');
+          }
+
+          let durationDays = null;
+          if (Object.prototype.hasOwnProperty.call(fixedDays, inputType)) {
+            durationDays = fixedDays[inputType];
+          } else if (inputType === 'customize') {
+            const parsed = Math.floor(Number(durationDaysRaw));
+            if (!Number.isFinite(parsed) || parsed <= 0) {
+              throw new Error('duration_days requis pour custom');
+            }
+            durationDays = parsed;
+          }
+
+          const now = Math.floor(Date.now() / 1000);
+          const expiresAt = durationDays === null ? null : now + durationDays * 86400;
+
+          const claims = {
+            license_id: crypto.randomUUID(),
+            request_id: requestId,
+            issued_at: now,
+            not_before: now,
+            expires_at: expiresAt,
+            machine_fingerprint_hash: machineFingerprint,
+            machine_fingerprint: machineFingerprint,
+            plan: inputType,
+            type: inputType,
+            customer_name: customerName,
+            product: 'LaboSuite Pro',
+            metadata: {
+              customer_phone: customerPhone,
+              notes,
+              app_version: appVersion,
+              duration_days: durationDays,
+              request_id: requestId,
+            },
+          };
+
+          const payload = Buffer.from(JSON.stringify(claims), 'utf8');
+          const signer = crypto.createSign('RSA-SHA256');
+          signer.update(payload);
+          signer.end();
+          const signature = signer.sign(privateKey);
+
+          const envelope = {
+            payload_b64: payload.toString('base64'),
+            signature_b64: signature.toString('base64'),
+            claims_preview: claims,
+          };
+
+          const outDir = path.join(process.cwd(), 'licenses');
+          fs.mkdirSync(outDir, { recursive: true });
+          const outFile = path.join(outDir, `${requestId}.license.json`);
+          fs.writeFileSync(outFile, JSON.stringify(envelope, null, 2), 'utf8');
+
+          console.log('Generated:', outFile);
+          NODE
+
+      - name: Commit generated license
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add licenses/*.license.json
+          if git diff --cached --quiet; then
+            echo "No license changes to commit"
+            exit 0
+          fi
+          git commit -m "chore(license): generate ${{ inputs.request_id }}"
+          git push
