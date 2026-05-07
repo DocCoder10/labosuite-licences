@@ -1,0 +1,24 @@
+{
+  "payload_b64": "eyJsaWNlbnNlX2lkIjoiN2E1OGNlMWEtYThkZi00NjU0LTk0MTAtZDdlYjcyZTNjODRmIiwicmVxdWVzdF9pZCI6IlJFUS1NT1YyTTg2Ti1SRFdGUSIsImlzc3VlZF9hdCI6MTc3ODEzMzI1NSwibm90X2JlZm9yZSI6MTc3ODEzMzI1NSwiZXhwaXJlc19hdCI6MTc3ODczODA1NSwibWFjaGluZV9maW5nZXJwcmludF9oYXNoIjoiYjk2NmU0M2FhNDMyNGNjN2YyMzQzZDIzNjUyM2ExYTQ3NmE1MzFiOGM5NDM1YWY4NWYxZjBkNjVmNGQ5MGZmYiIsIm1hY2hpbmVfZmluZ2VycHJpbnQiOiJiOTY2ZTQzYWE0MzI0Y2M3ZjIzNDNkMjM2NTIzYTFhNDc2YTUzMWI4Yzk0MzVhZjg1ZjFmMGQ2NWY0ZDkwZmZiIiwicGxhbiI6InRyaWFsIiwidHlwZSI6InRyaWFsIiwiY3VzdG9tZXJfbmFtZSI6IkNsaWVudCIsInByb2R1Y3QiOiJMYWJvU3VpdGUgUHJvIiwibWV0YWRhdGEiOnsiY3VzdG9tZXJfcGhvbmUiOiIiLCJub3RlcyI6IiIsImFwcF92ZXJzaW9uIjoiMS4wLjAiLCJkdXJhdGlvbl9kYXlzIjo3LCJyZXF1ZXN0X2lkIjoiUkVRLU1PVjJNODZOLVJEV0ZRIn19",
+  "signature_b64": "8oP1U/fIHG88ku+/nIz5zNb9QZL4uRBX5lY6obmNh3iSDN+YKF3pa0GLjSRlBLcLlC2btmSrQbzwZ1i/LF1D0yoU2aWDmFV9DSFyTxOsU7dJJ43MkQJYMtOfwwlCu7CK5REI8bEWFb98JelH9i9A8rnjIQoq2fPeKM+NZSM134MhvL+oHxxsGfAsMbTytYoAX5TLIrna39KNg9m8jJxcozE5u3QW1kRchNxod7lIPzS2NJXucCb6VEnZX35L0Z7YaJftyAziE3z4eTvm8CFfk+93+TWI+I1J16utkQtv6j/6GJTcNv/jHrG/HmFKeyBN0V3oT1oxBQFk9aKVTcOdQw==",
+  "claims_preview": {
+    "license_id": "7a58ce1a-a8df-4654-9410-d7eb72e3c84f",
+    "request_id": "REQ-MOV2M86N-RDWFQ",
+    "issued_at": 1778133255,
+    "not_before": 1778133255,
+    "expires_at": 1778738055,
+    "machine_fingerprint_hash": "b966e43aa4324cc7f2343d236523a1a476a531b8c9435af85f1f0d65f4d90ffb",
+    "machine_fingerprint": "b966e43aa4324cc7f2343d236523a1a476a531b8c9435af85f1f0d65f4d90ffb",
+    "plan": "trial",
+    "type": "trial",
+    "customer_name": "Client",
+    "product": "LaboSuite Pro",
+    "metadata": {
+      "customer_phone": "",
+      "notes": "",
+      "app_version": "1.0.0",
+      "duration_days": 7,
+      "request_id": "REQ-MOV2M86N-RDWFQ"
+    }
+  }
+}
