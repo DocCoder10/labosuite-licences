@@ -1,0 +1,24 @@
+{
+  "payload_b64": "eyJsaWNlbnNlX2lkIjoiZTNlNzk4OGUtMDBiNy00Mjk1LThlMzMtMmFkMWY4OGIyM2YzIiwicmVxdWVzdF9pZCI6IlJFUS1NUDE0R1FTVS1UR0FJTSIsImlzc3VlZF9hdCI6MTc3ODQ5OTYxMywibm90X2JlZm9yZSI6MTc3ODQ5OTYxMywiZXhwaXJlc19hdCI6MTgxMDAzNTYxMywibWFjaGluZV9maW5nZXJwcmludF9oYXNoIjoiZmJlYWFjMjgyYjYwOTcxMGMwYzBlMjk0YjliNGIwYWQ5Y2UwMGY4ZjA2ZGJlMmRiYTk3OThkMGU4M2MwZjg5NSIsIm1hY2hpbmVfZmluZ2VycHJpbnQiOiJmYmVhYWMyODJiNjA5NzEwYzBjMGUyOTRiOWI0YjBhZDljZTAwZjhmMDZkYmUyZGJhOTc5OGQwZTgzYzBmODk1IiwicGxhbiI6ImFubnVhbCIsInR5cGUiOiJhbm51YWwiLCJjdXN0b21lcl9uYW1lIjoiQ0FCSU5FVCBIRVJJVEFHRSBPSyIsInByb2R1Y3QiOiJMYWJvU3VpdGUgUHJvIiwibWV0YWRhdGEiOnsiY3VzdG9tZXJfcGhvbmUiOiIrMjIzIDc0NTM1MTU2Iiwibm90ZXMiOiIiLCJhcHBfdmVyc2lvbiI6IjEuMC4wIiwiZHVyYXRpb25fZGF5cyI6MzY1LCJyZXF1ZXN0X2lkIjoiUkVRLU1QMTRHUVNVLVRHQUlNIn19",
+  "signature_b64": "F4ulcfepjuYK4QM8cN8KWk+S/lEynekZkPgsYA/1YmOSZPIpKElVgnIi4+xVU703VHQyGpfl3atNE+a4ioGiqMJ0ke7Al4taawikE6QUl3Q1MNNj69RN6v/7yZDKqalUgmldCmInmVdDWcuxXfKfHJuDXC9z62TjnXo1DtsoxzL3wavZMeXooWrnI6gxfDcAMfnWUG+jFSsdNnogue3YBc4gTSpsqfkbOAlWzUxcqYP3vGURywS/yFOiRkvdoM8QBSADjfEyLvo4tcXNtjYP2xvNLbfWLtCQaMUbM50m3ibTG8VCifk8b4yWXoMXWdPad34FZzHXEU9mxezcz+4hJg==",
+  "claims_preview": {
+    "license_id": "e3e7988e-00b7-4295-8e33-2ad1f88b23f3",
+    "request_id": "REQ-MP14GQSU-TGAIM",
+    "issued_at": 1778499613,
+    "not_before": 1778499613,
+    "expires_at": 1810035613,
+    "machine_fingerprint_hash": "fbeaac282b609710c0c0e294b9b4b0ad9ce00f8f06dbe2dba9798d0e83c0f895",
+    "machine_fingerprint": "fbeaac282b609710c0c0e294b9b4b0ad9ce00f8f06dbe2dba9798d0e83c0f895",
+    "plan": "annual",
+    "type": "annual",
+    "customer_name": "CABINET HERITAGE OK",
+    "product": "LaboSuite Pro",
+    "metadata": {
+      "customer_phone": "+223 74535156",
+      "notes": "",
+      "app_version": "1.0.0",
+      "duration_days": 365,
+      "request_id": "REQ-MP14GQSU-TGAIM"
+    }
+  }
+}
