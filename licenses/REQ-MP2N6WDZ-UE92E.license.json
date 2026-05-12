@@ -1,0 +1,24 @@
+{
+  "payload_b64": "eyJsaWNlbnNlX2lkIjoiZjZlYjE1NGEtZTVkMi00OTA2LWIzNWYtYTIwZmZhNjQyZWFjIiwicmVxdWVzdF9pZCI6IlJFUS1NUDJONldEWi1VRTkyRSIsImlzc3VlZF9hdCI6MTc3ODU4Nzk2Niwibm90X2JlZm9yZSI6MTc3ODU4Nzk2NiwiZXhwaXJlc19hdCI6MTgxMDEyMzk2NiwibWFjaGluZV9maW5nZXJwcmludF9oYXNoIjoiZGI3NjVkMzQwZGUyMzlkZDQ4YTdiYWM5YzNjMmEzNDczYzBjMDc3MTBmNDRhZDA5YzIzYzgyMGU0ZTVhMzRlMCIsIm1hY2hpbmVfZmluZ2VycHJpbnQiOiJkYjc2NWQzNDBkZTIzOWRkNDhhN2JhYzljM2MyYTM0NzNjMGMwNzcxMGY0NGFkMDljMjNjODIwZTRlNWEzNGUwIiwicGxhbiI6ImFubnVhbCIsInR5cGUiOiJhbm51YWwiLCJjdXN0b21lcl9uYW1lIjoiQ0FCSU5FVCBEQU5BWUEiLCJwcm9kdWN0IjoiTGFib1N1aXRlIFBybyIsIm1ldGFkYXRhIjp7ImN1c3RvbWVyX3Bob25lIjoiIiwibm90ZXMiOiJFbnRyZXByaXNlIiwiYXBwX3ZlcnNpb24iOiIxLjAuMCIsImR1cmF0aW9uX2RheXMiOjM2NSwicmVxdWVzdF9pZCI6IlJFUS1NUDJONldEWi1VRTkyRSJ9fQ==",
+  "signature_b64": "uYSEWELbJqYUTZKUmC/msv6AqXY5T11sam2cCSGjDf7tVw+LoLOxqWgUeFTZvnpn7tMru+AkT8AEUj+hyjC6Y6wMDXiQGSTYg60Z8ZZ0kKqCDTxjaHhFb4ogA51Nmy8t0D0o+GEbZRGiUI31dK03GexMerMEbD01R7ilsXwOzIkhPAqR+BfoVjoqUbTeTdT1eX4nD4eA+2ILk3cr4iE24xBYpdYuR7pymsph0e3b3p3ARE5kf9DyLGTcDNhqJ6ByRvDL0MACTE04JjaeYK0Tpes/visJXFR7mMjUiat8nYLVbiujFAF0uNU0i9f3FnpfdSUwg7P5yyExHVXH1KU+Rg==",
+  "claims_preview": {
+    "license_id": "f6eb154a-e5d2-4906-b35f-a20ffa642eac",
+    "request_id": "REQ-MP2N6WDZ-UE92E",
+    "issued_at": 1778587966,
+    "not_before": 1778587966,
+    "expires_at": 1810123966,
+    "machine_fingerprint_hash": "db765d340de239dd48a7bac9c3c2a3473c0c07710f44ad09c23c820e4e5a34e0",
+    "machine_fingerprint": "db765d340de239dd48a7bac9c3c2a3473c0c07710f44ad09c23c820e4e5a34e0",
+    "plan": "annual",
+    "type": "annual",
+    "customer_name": "CABINET DANAYA",
+    "product": "LaboSuite Pro",
+    "metadata": {
+      "customer_phone": "",
+      "notes": "Entreprise",
+      "app_version": "1.0.0",
+      "duration_days": 365,
+      "request_id": "REQ-MP2N6WDZ-UE92E"
+    }
+  }
+}
