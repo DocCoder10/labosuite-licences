@@ -1,0 +1,24 @@
+{
+  "payload_b64": "eyJsaWNlbnNlX2lkIjoiNThiMTUzMWQtYmZiYi00OGM4LWJkZmQtNmVjYWQ5ZWZjYzQzIiwicmVxdWVzdF9pZCI6IlJFUS1NUDI1SFZOMS1WNjhPSiIsImlzc3VlZF9hdCI6MTc3ODU2MTQwMCwibm90X2JlZm9yZSI6MTc3ODU2MTQwMCwiZXhwaXJlc19hdCI6MTc3ODczNDIwMCwibWFjaGluZV9maW5nZXJwcmludF9oYXNoIjoiYjk2NmU0M2FhNDMyNGNjN2YyMzQzZDIzNjUyM2ExYTQ3NmE1MzFiOGM5NDM1YWY4NWYxZjBkNjVmNGQ5MGZmYiIsIm1hY2hpbmVfZmluZ2VycHJpbnQiOiJiOTY2ZTQzYWE0MzI0Y2M3ZjIzNDNkMjM2NTIzYTFhNDc2YTUzMWI4Yzk0MzVhZjg1ZjFmMGQ2NWY0ZDkwZmZiIiwicGxhbiI6ImN1c3RvbWl6ZSIsInR5cGUiOiJjdXN0b21pemUiLCJjdXN0b21lcl9uYW1lIjoiVmFtcHV0b3MiLCJwcm9kdWN0IjoiTGFib1N1aXRlIFBybyIsIm1ldGFkYXRhIjp7ImN1c3RvbWVyX3Bob25lIjoiNjM5Mzk5OTAiLCJub3RlcyI6ImFtaXRpw6kiLCJhcHBfdmVyc2lvbiI6IjEuMC4wIiwiZHVyYXRpb25fZGF5cyI6MiwicmVxdWVzdF9pZCI6IlJFUS1NUDI1SFZOMS1WNjhPSiJ9fQ==",
+  "signature_b64": "EPTJBuNvveH+Zx3/cvBp5+NNEUz+VgYAiICcHuzlhJEOZRv1xSDu5geHHezCXzhmfbbGb8RF5CzngFKMOcqFNDNIlZbknU0Y3sv+7RRiOrS92GFLFV60k9thK8Yt/58goHuVyJ3rYtElcaZpI0UmEKw4b1pgipm7hl/Y7pWObVe5+RF9hek7CZjAPuplazDRQu3UWRxW/UzvQwD8Hn+yDftmnAWKRdAPjlWqtGWtBdb5xJcH6Bc58pBeqar6GGzKKLdouPsG0jbbETkRXhkWavofHJqZ0WsgVgLnpnuxqnEESXauSpr4/CffJ65WTPc6rTn9LUBFLkuxxdmqKYaZOw==",
+  "claims_preview": {
+    "license_id": "58b1531d-bfbb-48c8-bdfd-6ecad9efcc43",
+    "request_id": "REQ-MP25HVN1-V68OJ",
+    "issued_at": 1778561400,
+    "not_before": 1778561400,
+    "expires_at": 1778734200,
+    "machine_fingerprint_hash": "b966e43aa4324cc7f2343d236523a1a476a531b8c9435af85f1f0d65f4d90ffb",
+    "machine_fingerprint": "b966e43aa4324cc7f2343d236523a1a476a531b8c9435af85f1f0d65f4d90ffb",
+    "plan": "customize",
+    "type": "customize",
+    "customer_name": "Vamputos",
+    "product": "LaboSuite Pro",
+    "metadata": {
+      "customer_phone": "63939990",
+      "notes": "amitié",
+      "app_version": "1.0.0",
+      "duration_days": 2,
+      "request_id": "REQ-MP25HVN1-V68OJ"
+    }
+  }
+}
