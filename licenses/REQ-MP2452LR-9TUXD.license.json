@@ -1,0 +1,24 @@
+{
+  "payload_b64": "eyJsaWNlbnNlX2lkIjoiM2E1ZTNmNGQtMTUyOS00MDk3LWIyZGYtMWIzYjMwMzQ3Mjk5IiwicmVxdWVzdF9pZCI6IlJFUS1NUDI0NTJMUi05VFVYRCIsImlzc3VlZF9hdCI6MTc3ODU1OTI2OCwibm90X2JlZm9yZSI6MTc3ODU1OTI2OCwiZXhwaXJlc19hdCI6MTc3ODY0NTY2OCwibWFjaGluZV9maW5nZXJwcmludF9oYXNoIjoiYjk2NmU0M2FhNDMyNGNjN2YyMzQzZDIzNjUyM2ExYTQ3NmE1MzFiOGM5NDM1YWY4NWYxZjBkNjVmNGQ5MGZmYiIsIm1hY2hpbmVfZmluZ2VycHJpbnQiOiJiOTY2ZTQzYWE0MzI0Y2M3ZjIzNDNkMjM2NTIzYTFhNDc2YTUzMWI4Yzk0MzVhZjg1ZjFmMGQ2NWY0ZDkwZmZiIiwicGxhbiI6ImN1c3RvbWl6ZSIsInR5cGUiOiJjdXN0b21pemUiLCJjdXN0b21lcl9uYW1lIjoidGVuaXZlYzIiLCJwcm9kdWN0IjoiTGFib1N1aXRlIFBybyIsIm1ldGFkYXRhIjp7ImN1c3RvbWVyX3Bob25lIjoiNDY3Mzg5MTYiLCJub3RlcyI6IiIsImFwcF92ZXJzaW9uIjoiMS4wLjAiLCJkdXJhdGlvbl9kYXlzIjoxLCJyZXF1ZXN0X2lkIjoiUkVRLU1QMjQ1MkxSLTlUVVhEIn19",
+  "signature_b64": "c7BtUJmaPKzmnTufqdip+BDdTNFaMpql63bpRmfsUuoJG+sSE7B1bKheWie97aewiAxcPUIs/5pri+vZ1CEwudv+7bRjIAO3dNPDq/dOvrA4GUcezMM71DaBglhKel/YIR9nS4Cnbc4a2Rqb+hhWNZCahyWsibaOWmOAtshgmly9W1Db57vSJr7+hEfuDBmk7Yd26xj/OhH3UyMSwDTLaAYzxwlES/uSeAVQm8yGmDizViSCxl2FvJLImxAS9v6TF5Xjc4A+0Xe65ZLyVtJ5ZA3AIfFleUUb4FEf1maiTK18tY9mu2eUMPys+42492cS8keDyBk8XrOy8Epe7C6DCw==",
+  "claims_preview": {
+    "license_id": "3a5e3f4d-1529-4097-b2df-1b3b30347299",
+    "request_id": "REQ-MP2452LR-9TUXD",
+    "issued_at": 1778559268,
+    "not_before": 1778559268,
+    "expires_at": 1778645668,
+    "machine_fingerprint_hash": "b966e43aa4324cc7f2343d236523a1a476a531b8c9435af85f1f0d65f4d90ffb",
+    "machine_fingerprint": "b966e43aa4324cc7f2343d236523a1a476a531b8c9435af85f1f0d65f4d90ffb",
+    "plan": "customize",
+    "type": "customize",
+    "customer_name": "tenivec2",
+    "product": "LaboSuite Pro",
+    "metadata": {
+      "customer_phone": "46738916",
+      "notes": "",
+      "app_version": "1.0.0",
+      "duration_days": 1,
+      "request_id": "REQ-MP2452LR-9TUXD"
+    }
+  }
+}
